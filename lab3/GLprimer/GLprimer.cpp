@@ -377,9 +377,9 @@ int main(int, char *[]) {
     // The index buffer is part of the VAO state and is bound with it.
     */
     
-    glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, nullptr); // was 3
-    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);  // GL_FILL
-    glCullFace(GL_BACK);
+    //glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, nullptr); // was 3
+    //glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);  // GL_FILL
+    //glCullFace(GL_BACK);
     
     /*
     glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, nullptr); // was 3
