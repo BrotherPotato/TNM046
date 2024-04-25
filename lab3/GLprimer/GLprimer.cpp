@@ -108,9 +108,9 @@ std::array<float, 16> mat4rotx(float angle) {
 
 std::array<float, 16> mat4roty(float angle) {
     std::array<float, 16> temp = {
-        cos(angle), 0.0f, sin(angle), 0.0f, 
+        cos(angle), 0.0f, -sin(angle), 0.0f, 
         0.0f,       1.0f, 0.0f,         0.0f,                          
-        -sin(angle), 0.0f, cos(angle), 0.0f, 
+        sin(angle), 0.0f, cos(angle), 0.0f, 
         0.0f,       0.0f, 0.0f,         1.0f
     };
     return temp;
