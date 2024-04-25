@@ -7,10 +7,12 @@ out vec4 finalcolor;
 
 in vec3 interpolatedNormal;
 in vec2 st;
+in vec3 Lin;
 
 void main() {
 	//vec3 L = normalize(mat3(T) * vec3(0.0f, 0.0f, 1.0f));
-	vec3 L = vec3(T * vec4(0.0f, 0.0f, 1.0f, 1.0f));
+	//vec3 L = vec3(T * vec4(0.0f, 0.0f, 1.0f, 1.0f));
+	vec3 L = Lin;
 	vec3 V = vec3(0.0f,0.0f,1.0f);
 	vec3 N = interpolatedNormal;
 
@@ -24,6 +26,7 @@ void main() {
 	vec3 kd = 1.0f * colorRGB;
 	vec3 Id = 0.8f * colorGreyScale;
 	vec3 ks = 1.0f * colorGreyScale;
+	//vec3 ks = 1.0f * vec3(0.0f, 1.0f, 0.0f);
 	vec3 Is = 0.9f * colorGreyScale;
 
 	// This assumes that N, L and V are normalized.
