@@ -298,13 +298,15 @@ int main(int, char *[]) {
     // --- Add this to the rendering loop, right before the call to glBindVertexArray()
     glUseProgram(myShader.id());
 
-    /*
-    glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, nullptr); // was 3
-    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);  // GL_FILL
-    glCullFace(GL_BACK);
-    */
     
-    glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, nullptr); // was 3
+    //glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, nullptr); // was 3
+    myShape.render();
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);  // GL_FILL
+    glCullFace(GL_FRONT);
+    
+    
+    //glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, nullptr); // was 3
+    myShape.render();
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // LINE
     glCullFace(GL_BACK);                                        // GL_FRONT
     
