@@ -307,7 +307,7 @@ int main(int, char *[]) {
     
     //glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, nullptr); // was 3
     myShape.render();
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // LINE
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); // LINE
     glCullFace(GL_BACK);                                        // GL_FRONT
     
     // Do this in the rendering loop to update the uniform variable "time"

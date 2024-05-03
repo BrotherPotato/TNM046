@@ -23,7 +23,6 @@ void main() {
 
 	vec3 ka = 0.9f * colorRGB;
 	vec3 Ia = 0.5f * colorGreyScale;
-	//vec3 kd = 1.0f * colorRGB;
 	vec3 kd = 1.0f * colorRGB;
 	vec3 Id = 0.8f * colorGreyScale;
 	vec3 ks = 0.1f * colorGreyScale;
