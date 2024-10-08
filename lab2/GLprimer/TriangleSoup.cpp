@@ -134,10 +134,10 @@ void TriangleSoup::createBox(float xsize, float ysize, float zsize) {
         xsize,  -ysize, -zsize, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,  // Vertex 1
         -xsize, ysize,  -zsize, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,  // Vertex 2
         xsize,  ysize,  -zsize, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,  // Vertex 3
-        -xsize, -ysize, zsize,  0.0f, 0.0f, 1.0f, 0.0f, 0.0f,  // Vertex 0
-        xsize,  -ysize, zsize,  0.0f, 0.0f, 1.0f, 0.0f, 0.0f,  // Vertex 1
-        -xsize, ysize,  zsize,  0.0f, 0.0f, 1.0f, 0.0f, 0.0f,  // Vertex 2
-        xsize,  ysize,  zsize,  0.0f, 0.0f, 1.0f, 0.0f, 0.0f   // Vertex 3
+        -xsize, -ysize, zsize,  0.0f, 0.0f, 1.0f, 0.0f, 0.0f,  // Vertex 4
+        xsize,  -ysize, zsize,  0.0f, 0.0f, 1.0f, 0.0f, 0.0f,  // Vertex 5
+        -xsize, ysize,  zsize,  0.0f, 0.0f, 1.0f, 0.0f, 0.0f,  // Vertex 6
+        xsize,  ysize,  zsize,  0.0f, 0.0f, 1.0f, 0.0f, 0.0f   // Vertex 7
     };
     const GLuint index_array_data[] = {0, 3, 1, 0, 2, 3, 1, 4, 0, 1, 5, 4, 4, 2, 0, 4, 6, 2,
                                        1, 3, 7, 1, 7, 5, 7, 2, 6, 7, 3, 2, 4, 5, 7, 4, 7, 6};
