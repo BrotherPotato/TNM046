@@ -251,12 +251,12 @@ int main(int, char *[]) {
         -1.0f, 1.0f, 1.0f, // 7
     };
     const std::vector<GLuint> indexArrayData = {
-        0, 1, 3,    1, 2, 3,
-        1, 6, 7,    1, 7, 2,
-        3, 2, 7,    3, 7, 5,
-        0, 3, 5,    0, 5, 4,
-        0, 6, 1,    0, 4, 6,
-        6, 4, 5,    6, 5, 7,
+        0, 1, 3,    1, 2, 3, // face 1
+        1, 6, 7,    1, 7, 2, // face 2
+        3, 2, 7,    3, 7, 5, // face 3
+        0, 3, 5,    0, 5, 4, // face 4
+        0, 6, 1,    0, 4, 6, // face 5
+        6, 4, 5,    6, 5, 7, // face 6
     };
     // --- Add this after the other vertex array declarations --------------
     const std::vector<GLfloat> colorArrayData = {
@@ -393,9 +393,17 @@ int main(int, char *[]) {
     //glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, nullptr); // was 3
     //glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);  // GL_FILL
     //glCullFace(GL_BACK);
-    
-    glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, nullptr); // was 3
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // LINE
+    //
+    //glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, nullptr); // was 3
+    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // GL_LINE
+    //glCullFace(GL_FRONT);
+
+    glDrawElements(GL_TRIANGLES, indexArrayData.size() * sizeof(GLuint), GL_UNSIGNED_INT, nullptr);                    // was 3
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);                   // GL_FILL
+    glCullFace(GL_BACK);
+
+    glDrawElements(GL_TRIANGLES, indexArrayData.size() * sizeof(GLuint), GL_UNSIGNED_INT, nullptr);                    // was 3
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);                   // GL_LINE
     glCullFace(GL_FRONT);
     
     // Do this in the rendering loop to update the uniform variable "time"
